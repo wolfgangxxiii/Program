@@ -1,0 +1,31 @@
+name: Test Rust and build experimental AppImage
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install GTK4 build dependencies
+        run: sudo apt-get update && sudo apt-get install -y pkg-config gcc libgtk-4-dev libfuse2t64
+      - name: Rust tests
+        run: cargo test --all-targets
+      - name: Build executables
+        run: cargo build --release --bins
+      - name: Install linuxdeploy
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          curl -fL --retry 3 -o "$RUNNER_TEMP/bin/linuxdeploy" \
+            https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          chmod +x "$RUNNER_TEMP/bin/linuxdeploy"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Assemble experimental AppImage
+        env:
+          APPIMAGE_EXTRACT_AND_RUN: "1"
+        run: bash build-appimage.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grub-studio-universal-v2.0.0-experimental
+          path: GRUB-Studio-Universal-v2.0.0-x86_64.AppImage

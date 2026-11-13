@@ -1,0 +1,28 @@
+[package]
+name = "grub-studio-universal"
+version = "2.0.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Native Wayland GRUB configuration studio with a privilege-separated helper"
+
+[lib]
+name = "grub_studio"
+path = "src/lib.rs"
+
+[[bin]]
+name = "grub-studio-universal"
+path = "src/main.rs"
+
+[[bin]]
+name = "grub-studio-helper"
+path = "src/bin/helper.rs"
+
+[dependencies]
+gtk4 = "0.10.3"
+serde_json = "1.0"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=GRUB Studio Universal
+Name[pl]=GRUB Studio Universal
+Comment=Manage GRUB settings and EFI menu entries
+Comment[pl]=Zarządzaj ustawieniami GRUB i wpisami EFI
+Exec=grub-studio-universal
+Icon=grub-studio-universal
+Categories=System;Settings;
+Terminal=false
+StartupNotify=true
+Keywords=GRUB;EFI;Bazzite;Boot;

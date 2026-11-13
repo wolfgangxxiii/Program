@@ -1,0 +1,67 @@
+/* GRUB Studio Universal 2.0 — compact native Wayland/GTK4 style. */
+* { transition: none; }
+.app-root { font-family: "Cantarell", "Noto Sans", sans-serif; font-size: 13px; }
+
+.grub-dark { background: #0f131a; color: #e6edf7; }
+.grub-dark .studio-header { background: #171d27; border-bottom: 1px solid #2a3442; }
+.grub-dark .studio-sidebar { background: #151b25; border-right: 1px solid #28323e; }
+.grub-dark .studio-card { background: #1a222e; border: 1px solid #2c3848; }
+.grub-dark .studio-footer { background: #131924; border-top: 1px solid #28323e; color: #9faebe; }
+.grub-dark .muted, .grub-dark .nav-heading, .grub-dark .nav-footer { color: #a0aec0; }
+.grub-dark .status-badge { background: #153a42; color: #92eee7; }
+.grub-dark .nav-button { color: #b9c8d8; }
+.grub-dark .nav-active { background: #274b7b; color: #f8fbff; }
+.grub-dark .warning { color: #fac58c; }
+.grub-dark .studio-list { background: #131b25; }
+.grub-dark .studio-list row { border-bottom: 1px solid #303a46; }
+.grub-dark .studio-list row:selected { background: #285087; color: white; }
+.grub-dark .hero { background: #1a2b44; border-color: #35577b; }
+.grub-dark entry, .grub-dark dropdown, .grub-dark textview { background: #111923; color: #edf2fb; border: 1px solid #334154; }
+.grub-dark .action-button.flat { background: #263242; color: #eaf1ff; border: 1px solid #3b4a5e; }
+.grub-dark .action-button.suggested-action { background: #2467bb; color: #ffffff; }
+
+.grub-light { background: #f4f6fa; color: #202938; }
+.grub-light .studio-header { background: #ffffff; border-bottom: 1px solid #d9e0ea; }
+.grub-light .studio-sidebar { background: #eaf0f7; border-right: 1px solid #d5deea; }
+.grub-light .studio-card { background: #ffffff; border: 1px solid #dbe3ec; }
+.grub-light .studio-footer { background: #f0f4f8; border-top: 1px solid #dbe3ec; color: #607286; }
+.grub-light .muted, .grub-light .nav-heading, .grub-light .nav-footer { color: #61758a; }
+.grub-light .status-badge { background: #d6f1e8; color: #1d6c51; }
+.grub-light .nav-button { color: #4b5d73; }
+.grub-light .nav-active { background: #d0e3f9; color: #174f8e; }
+.grub-light .warning { color: #9e5d18; }
+.grub-light .studio-list { background: #fafcff; }
+.grub-light .studio-list row { border-bottom: 1px solid #e1e7ee; }
+.grub-light .studio-list row:selected { background: #cde4ff; color: #1f426c; }
+.grub-light .hero { background: #eaf4ff; border-color: #bcd8f8; }
+.grub-light entry, .grub-light dropdown, .grub-light textview { background: #ffffff; color: #202938; border: 1px solid #c9d5e3; }
+.grub-light .action-button.flat { background: #f3f6fa; color: #334966; border: 1px solid #ccd7e5; }
+.grub-light .action-button.suggested-action { background: #236abf; color: #ffffff; }
+
+.studio-header { min-height: 56px; padding: 7px 14px; }
+.brand { font-weight: 900; font-size: 16px; letter-spacing: 0.4px; }
+.status-badge { padding: 6px 12px; border-radius: 15px; font-size: 11px; font-weight: 800; }
+.studio-sidebar { padding: 17px 9px 11px; }
+.nav-heading { margin: 3px 9px 11px; font-size: 10px; font-weight: 800; letter-spacing: 0.9px; }
+.nav-button { padding: 10px 12px; border-radius: 9px; border: none; box-shadow: none; font-size: 12px; font-weight: 600; }
+.nav-active { font-weight: 800; }
+.nav-footer { margin: 8px 7px; font-size: 10px; }
+.studio-card { border-radius: 12px; padding: 14px; }
+.page-title { font-weight: 850; font-size: 23px; letter-spacing: -0.5px; }
+.section-heading { font-size: 11px; font-weight: 800; letter-spacing: 0.6px; }
+.hero-title { font-weight: 750; font-size: 18px; }
+.muted { font-size: 12px; line-height: 1.35; }
+.warning { font-size: 12px; line-height: 1.4; }
+.row-title { font-size: 13px; font-weight: 750; }
+.item-label { font-size: 12px; }
+.actions { margin-top: 4px; margin-bottom: 3px; }
+.action-button { min-height: 31px; padding: 5px 12px; border-radius: 8px; font-weight: 650; font-size: 12px; }
+.studio-list { border-radius: 8px; }
+.studio-list row { min-height: 42px; }
+.studio-list row:hover { filter: brightness(1.1); }
+.studio-footer { min-height: 21px; padding: 6px 12px; font-size: 10px; }
+.lang-select { min-width: 102px; }
+.boot-preview { background: #091626; border: 1px solid #356399; border-radius: 8px; padding: 22px; min-height: 142px; }
+.preview-title { color: #dde9f8; font-family: monospace; font-size: 14px; font-weight: bold; }
+.preview-entry { color: #8faecc; padding: 6px 10px; font-family: monospace; font-size: 12px; }
+.preview-selected { color: #ffffff; background: #255d9e; border-radius: 5px; padding: 6px 10px; font-family: monospace; font-size: 12px; }
